@@ -1,0 +1,673 @@
+* applied-ml
+  :PROPERTIES:
+  :CUSTOM_ID: applied-ml
+  :END:
+
+Curated papers, articles, and blogs on *data science & machine learning
+in production*. ⚙️
+
+[[./CONTRIBUTING.md][[[https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat]]]]
+[[http://hits.dwyl.com/eugeneyan/applied-ml.svg]]
+
+Figuring out how to implement your ML project? Learn from *how other
+organizations have done it*:
+
+- *How* the problem is framed 🔎(e.g., personalization as recsys
+  vs. search vs. sequences)
+- *What* machine learning techniques worked ✅ (and sometimes, what
+  didn't ❌)
+- *Why* it works, the science behind it with research, literature, and
+  references 📂
+- *What* real-world results were achieved (so you can better assess ROI
+  ⏰💰📈)
+
+*Table of Contents*
+
+1.  [[#data-quality][Data Quality]]
+2.  [[#data-engineering][Data Engineering]]
+3.  [[#classification][Classification]]
+4.  [[#regression][Regression]]
+5.  [[#recommendation][Recommendation]]
+6.  [[#search--ranking][Search & Ranking]]
+7.  [[#natural-language-processing][Natural Language Processing]]
+8.  [[#sequence-modelling][Sequence Modelling]]
+9.  [[#forecasting][Forecasting]]
+10. [[#computer-vision][Computer Vision]]
+11. [[#reinforcement-learning][Reinforcement Learning]]
+12. [[#anomaly-detection][Anomaly Detection]]
+13. [[#graph][Graph]]
+14. [[#optimization][Optimization]]
+15. [[#information-extraction][Information Extraction]]
+16. [[#weak-supervision][Weak Supervision]]
+17. [[#generation][Generation]]
+18. [[#validation-and-ab-testing][Validation and A/B Testing]]
+19. [[#practices][Practices]]
+20. [[#failures][Failures]]
+
+** Data Quality
+   :PROPERTIES:
+   :CUSTOM_ID: data-quality
+   :END:
+
+1. [[https://eng.uber.com/monitoring-data-quality-at-scale/][Monitoring
+   Data Quality at Scale with Statistical Modeling]] =Uber=
+2. [[https://databricks.com/session_na20/an-approach-to-data-quality-for-netflix-personalization-systems][An
+   Approach to Data Quality for Netflix Personalization Systems]]
+   =Netflix=
+3. [[https://www.amazon.science/publications/automating-large-scale-data-quality-verification][Automating
+   Large-Scale Data Quality Verification]]
+   ([[https://assets.amazon.science/a6/88/ad858ee240c38c6e9dce128250c0/automating-large-scale-data-quality-verification.pdf][Paper]])=Amazon=
+4. [[https://blog.gojekengineering.com/meet-hodor-gojeks-upstream-data-quality-tool-fb877447aad1][Meet
+   Hodor --- Gojek's Upstream Data Quality Tool]] =Gojek=
+5. [[https://www.slideshare.net/HadoopSummit/reliable-and-scalable-data-ingestion-at-airbnb-63920989][Reliable
+   and Scalable Data Ingestion at Airbnb]] =Airbnb=
+
+** Data Engineering
+   :PROPERTIES:
+   :CUSTOM_ID: data-engineering
+   :END:
+
+1. [[https://databricks.com/session/zipline-airbnbs-machine-learning-data-management-platform][Zipline:
+   Airbnb's Machine Learning Data Management Platform]] =Airbnb=
+2. [[https://databricks.com/session_na20/sputnik-airbnbs-apache-spark-framework-for-data-engineering][Sputnik:
+   Airbnb's Apache Spark Framework for Data Engineering]] =Airbnb=
+3. [[https://cloud.google.com/blog/products/ai-machine-learning/introducing-feast-an-open-source-feature-store-for-machine-learning][Introducing
+   Feast: an open source feature store for machine learning]]
+   ([[https://github.com/feast-dev/feast][Code]])=Gojek=
+4. [[https://blog.gojekengineering.com/feast-bridging-ml-models-and-data-efd06b7d1644][Feast:
+   Bridging ML Models and Data]] =Gojek=
+5. [[https://eng.lyft.com/amundsen-lyfts-data-discovery-metadata-engine-62d27254fbb9][Amundsen
+   --- Lyft's Data Discovery & Metadata Engine]] =Lyft=
+6. [[https://eng.lyft.com/open-sourcing-amundsen-a-data-discovery-and-metadata-platform-2282bb436234][Open
+   Sourcing Amundsen: A Data Discovery And Metadata Platform]]
+   ([[https://github.com/lyft/amundsen][Code]])=Lyft=
+7. [[https://netflixtechblog.com/metacat-making-big-data-discoverable-and-meaningful-at-netflix-56fb36a53520][Metacat:
+   Making Big Data Discoverable and Meaningful at Netflix]] =Netflix=
+8. [[https://engineering.atspotify.com/2020/02/27/how-we-improved-data-discovery-for-data-scientists-at-spotify/][How
+   We Improved Data Discovery for Data Scientists at Spotify]] =Spotify=
+
+** Classification
+   :PROPERTIES:
+   :CUSTOM_ID: classification
+   :END:
+
+1.  [[https://engineering.linkedin.com/research/2011/high-precision-phrase-based-document-classification-on-a-modern-scale][High-Precision
+    Phrase-Based Document Classification on a Modern Scale]]
+    ([[http://web.stanford.edu/~gavish/documents/phrase_based.pdf][Paper]])
+    =LinkedIn=
+2.  [[https://dl.acm.org/doi/10.14778/2733004.2733024][Chimera:
+    Large-Scale Classification using Machine Learning, Rules, and
+    Crowdsourcing]]
+    ([[http://pages.cs.wisc.edu/%7Eanhai/papers/chimera-vldb14.pdf][Paper]])
+    =WalmartLabs=
+3.  [[https://dl.acm.org/doi/10.1145/2396761.2396838][Large-scale Item
+    Categorization for e-Commerce]]
+    ([[https://www.researchgate.net/profile/Jean_David_Ruvini/publication/262270957_Large-scale_item_categorization_for_e-commerce/links/5512dc3d0cf270fd7e33a0d5/Large-scale-item-categorization-for-e-commerce.pdf][Paper]])
+    =DianPing=, =eBay=
+4.  [[https://www.kdd.org/kdd2016/subtopic/view/large-scale-item-categorization-in-e-commerce-using-multiple-recurrent-neur/][Large-Scale
+    Item Categorization in e-Commerce Using Multiple Recurrent Neural
+    Networks]]
+    ([[https://www.kdd.org/kdd2016/papers/files/adf0392-haAemb.pdf][Paper]])
+    =NAVER=
+5.  [[https://engineering.shopify.com/blogs/engineering/categorizing-products-at-scale][Categorizing
+    Products at Scale]] =Shopify=
+6.  [[https://arxiv.org/abs/1511.03677][Learning to Diagnose with LSTM
+    Recurrent Neural Networks]]
+    ([[https://arxiv.org/pdf/1511.03677.pdf][Paper]]) =Google=
+7.  [[https://medium.com/airbnb-engineering/discovering-and-classifying-in-app-message-intent-at-airbnb-6a55f5400a0c][Discovering
+    and Classifying In-app Message Intent at Airbnb]] =Airbnb=
+8.  [[https://github.blog/2020-01-22-how-we-built-good-first-issues/][How
+    We Built the Good First Issues Feature]] =GitHub=
+9.  [[https://hacks.mozilla.org/2019/04/teaching-machines-to-triage-firefox-bugs/][Teaching
+    Machines to Triage Firefox Bugs]] =Mozilla=
+10. [[https://hacks.mozilla.org/2020/07/testing-firefox-more-efficiently-with-machine-learning/][Testing
+    Firefox More Efficiently with Machine Learning]] =Mozilla=
+11. [[https://www.microsoft.com/en-us/research/blog/a-path-to-personalization-using-ml-to-subtype-patients-receiving-digital-mental-health-interventions/][Using
+    ML to Subtype Patients Receiving Digital Mental Health
+    Interventions]]
+    ([[https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2768347][Paper]])
+    =Microsoft=
+12. [[https://research.google/pubs/pub36678/][Prediction of Advertiser
+    Churn for Google AdWords]]
+    ([[https://storage.googleapis.com/pub-tools-public-publication-data/pdf/36678.pdf][Paper]])
+    =Google=
+
+** Regression
+   :PROPERTIES:
+   :CUSTOM_ID: regression
+   :END:
+
+1. [[https://medium.com/airbnb-engineering/using-machine-learning-to-predict-value-of-homes-on-airbnb-9272d3d4739d][Using
+   Machine Learning to Predict Value of Homes On Airbnb]] =Airbnb=
+2. [[https://blog.twitter.com/engineering/en_us/topics/insights/2020/using-machine-learning-to-predict-the-value-of-ad-requests.html][Using
+   Machine Learning to Predict the Value of Ad Requests]] =Twitter=
+3. [[https://netflixtechblog.com/open-sourcing-riskquant-a-library-for-quantifying-risk-6720cc1e4968][Open-Sourcing
+   Riskquant, a Library for Quantifying Risk]]
+   ([[https://github.com/Netflix-Skunkworks/riskquant][Code]]) =NetFlix=
+
+** Recommendation
+   :PROPERTIES:
+   :CUSTOM_ID: recommendation
+   :END:
+
+1.  [[https://ieeexplore.ieee.org/document/1167344][Amazon.com
+    Recommendations: Item-to-Item Collaborative Filtering]]
+    ([[https://www.cs.umd.edu/~samir/498/Amazon-Recommendations.pdf][Paper]])
+    =Amazon=
+2.  [[https://arxiv.org/abs/1707.08113][Recommending Complementary
+    Products in E-Commerce Push Notifications with Mixture Models]]
+    ([[https://arxiv.org/pdf/1707.08113.pdf][Paper]]) =Alibaba=
+3.  [[https://arxiv.org/abs/1905.06874][Behavior Sequence Transformer
+    for E-commerce Recommendation in Alibaba]]
+    ([[https://arxiv.org/pdf/1905.06874.pdf][Paper]]) =Alibaba=
+4.  [[https://arxiv.org/abs/1511.06939][Session-based Recommendations
+    with Recurrent Neural Networks]]
+    ([[https://arxiv.org/pdf/1511.06939.pdf][Paper]]) =Telefonica=
+5.  [[https://cloud.google.com/blog/products/ai-machine-learning/how-20th-century-fox-uses-ml-to-predict-a-movie-audience][How
+    20th Century Fox uses ML to predict a movie audience]]
+    ([[https://arxiv.org/abs/1810.08189][Paper]]) =20th Century Fox=
+6.  [[https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/45530.pdf][Deep
+    Neural Networks for YouTube Recommendations]] =YouTube=
+7.  [[https://www.tripadvisor.com/engineering/personalized-recommendations-for-experiences-using-deep-learning/][Personalized
+    Recommendations for Experiences Using Deep Learning]] =TripAdvisor=
+8.  [[https://arxiv.org/abs/1606.07154][E-commerce in Your Inbox:
+    Product Recommendations at Scale]] =Yahoo=
+9.  [[https://arxiv.org/abs/1606.07154][Product Recommendations at
+    Scale]] ([[https://arxiv.org/pdf/1606.07154.pdf][Paper]]) =Yahoo=
+10. [[https://ai.facebook.com/blog/powered-by-ai-instagrams-explore-recommender-system/][Powered
+    by AI: Instagram's Explore recommender system]] =Facebook=
+11. [[https://netflixtechblog.com/netflix-recommendations-beyond-the-5-stars-part-1-55838468f429][Netflix
+    Recommendations: Beyond the 5 stars (Part 1]]
+    ([[https://netflixtechblog.com/netflix-recommendations-beyond-the-5-stars-part-2-d9b96aa399f5][Part
+    2]]) =Netflix=
+12. [[https://netflixtechblog.com/learning-a-personalized-homepage-aa8ec670359a][Learning
+    a Personalized Homepage]] =Netflix=
+13. [[https://netflixtechblog.com/artwork-personalization-c589f074ad76][Artwork
+    Personalization at Netflix]] =Netflix=
+14. [[https://netflixtechblog.com/to-be-continued-helping-you-find-shows-to-continue-watching-on-7c0d8ee4dab6][To
+    Be Continued: Helping you find shows to continue watching on
+    Netflix]] =Netflix=
+15. [[https://dl.acm.org/doi/10.1145/3240323.3240372][Calibrated
+    Recommendations]]
+    ([[https://dl.acm.org/doi/pdf/10.1145/3240323.3240372][Paper]])
+    =Netflix=
+16. [[https://eng.uber.com/uber-eats-recommending-marketplace/][Food
+    Discovery with Uber Eats: Recommending for the Marketplace]] =Uber=
+17. [[https://eng.uber.com/uber-eats-graph-learning/][Food Discovery
+    with Uber Eats: Using Graph Learning to Power Recommendations]]
+    =Uber=
+18. [[https://notes.variogr.am/2012/12/11/how-music-recommendation-works-and-doesnt-work/][How
+    Music Recommendation Works --- And Doesn't Work]] =Spotify=
+19. [[http://sigir.org/afirm2019/slides/16.%20Friday%20-%20Music%20Recommendation%20at%20Spotify%20-%20Ben%20Carterette.pdf][Music
+    recommendation at Spotify]] =Spotify=
+20. [[https://benanne.github.io/2014/08/05/spotify-cnns.html][Recommending
+    Music on Spotify with Deep Learning]] =Spotify=
+21. [[https://engineering.atspotify.com/2020/01/16/for-your-ears-only-personalizing-spotify-home-with-machine-learning/][For
+    Your Ears Only: Personalizing Spotify Home with Machine Learning]]
+    =Spotify=
+22. [[https://engineering.atspotify.com/2020/04/15/reach-for-the-top-how-spotify-built-shortcuts-in-just-six-months/][Reach
+    for the Top: How Spotify Built Shortcuts in Just Six Months]]
+    =Spotify=
+23. [[https://dl.acm.org/doi/10.1145/3240323.3240354][Explore, Exploit,
+    and Explain: Personalizing Explainable Recommendations with
+    Bandits]]
+    ([[https://static1.squarespace.com/static/5ae0d0b48ab7227d232c2bea/t/5ba849e3c83025fa56814f45/1537755637453/BartRecSys.pdf][Paper]])
+    =Spotify=
+24. [[https://engineering.shopify.com/blogs/engineering/evolution-kit-automating-marketing-machine-learning][The
+    Evolution of Kit: Automating Marketing Using Machine Learning]]
+    =Shopify=
+25. [[https://dropbox.tech/machine-learning/content-suggestions-machine-learning][Using
+    Machine Learning to Predict what File you Need Next (Part 1)]]
+    =Dropbox=
+26. [[https://dropbox.tech/machine-learning/using-machine-learning-to-predict-what-file-you-need-next-part-2][Using
+    Machine Learning to Predict what File you Need Next (Part 2)]]
+    =Dropbox=
+27. [[https://engineering.linkedin.com/blog/2016/12/personalized-recommendations-in-linkedin-learning][Personalized
+    Recommendations in LinkedIn Learning]] =LinkedIn=
+28. [[https://engineering.linkedin.com/blog/2020/course-recommendations-ai-part-one][A
+    Closer Look at the AI Behind Course Recommendations on LinkedIn
+    Learning (Part 1)]] =LinkedIn=
+29. [[https://engineering.linkedin.com/blog/2020/course-recommendations-ai-part-two][A
+    Closer Look at the AI Behind Course Recommendations on LinkedIn
+    Learning (Part 2)]] =LinkedIn=
+30. [[https://dl.acm.org/doi/pdf/10.1145/3357384.3357817][Learning to be
+    Relevant: Evolution of a Course Recommendation System]] (*PAPER
+    NEEDED*)=LinkedIn=
+31. [[https://newsroom.tiktok.com/en-us/how-tiktok-recommends-videos-for-you][How
+    TikTok recommends videos #ForYou]] =ByteDance=
+
+** Search & Ranking
+   :PROPERTIES:
+   :CUSTOM_ID: search-ranking
+   :END:
+
+1.  [[https://www.amazon.science/publications/amazon-search-the-joy-of-ranking-products][Amazon
+    Search: The Joy of Ranking Products]]
+    ([[https://assets.amazon.science/89/cd/34289f1f4d25b5857d776bdf04d5/amazon-search-the-joy-of-ranking-products.pdf][Paper]])
+    =Amazon=
+2.  [[https://www.amazon.science/publications/why-do-people-buy-irrelevant-items-in-voice-product-search][Why
+    Do People Buy Seemingly Irrelevant Items in Voice Product Search?]]
+    ([[https://assets.amazon.science/f7/48/0562b2c14338a0b76ccf4f523fa5/why-do-people-buy-irrelevant-items-in-voice-product-search.pdf][Paper]])
+    =Amazon=
+3.  [[https://www.slideshare.net/eugeneyan/how-lazada-ranks-products-to-improve-customer-experience-and-conversion][How
+    Lazada Ranks Products to Improve Customer Experience and
+    Conversion]] =Lazada=
+4.  [[https://blog.twitter.com/engineering/en_us/topics/insights/2017/using-deep-learning-at-scale-in-twitters-timelines.html][Using
+    Deep Learning at Scale in Twitter's Timelines]] =Twitter=
+5.  [[https://medium.com/airbnb-engineering/machine-learning-powered-search-ranking-of-airbnb-experiences-110b4b1a0789][Machine
+    Learning-Powered Search Ranking of Airbnb Experiences]] =Airbnb=
+6.  [[https://arxiv.org/abs/1810.09591][Applying Deep Learning To Airbnb
+    Search]] ([[https://arxiv.org/pdf/1810.09591.pdf][Paper]]) =Airbnb=
+7.  [[https://arxiv.org/abs/2004.02621][Managing Diversity in Airbnb
+    Search]] ([[https://arxiv.org/pdf/2004.02621.pdf][Paper]]) =Airbnb=
+8.  [[https://www.kdd.org/kdd2016/subtopic/view/ranking-relevance-in-yahoo-search][Ranking
+    Relevance in Yahoo Search]]
+    ([[https://www.kdd.org/kdd2016/papers/files/adf0361-yinA.pdf][Paper]])
+    =Yahoo=
+9.  [[https://arxiv.org/abs/1711.01377][An Ensemble-Based Approach to
+    Click-Through Rate Prediction for Promoted Listings at Etsy]]
+    ([[https://arxiv.org/pdf/1711.01377.pdf][Paper]]) =Etsy=
+10. [[https://arxiv.org/abs/1605.04624][Learning to Rank Personalized
+    Search Results in Professional Networks]]
+    ([[https://arxiv.org/pdf/1605.04624.pdf][Paper]]) =LinkedIn=
+11. [[https://arxiv.org/abs/1902.09041][Entity Personalized Talent
+    Search Models with Tree Interaction Features]]
+    ([[https://arxiv.org/pdf/1902.09041.pdf][Paper]]) =LinkedIn=
+12. [[https://arxiv.org/abs/1809.06488][In-Session Personalization for
+    Talent Search]] ([[https://arxiv.org/pdf/1809.06488.pdf][Paper]])
+    =LinkedIn=
+13. [[https://engineering.linkedin.com/blog/2019/04/ai-behind-linkedin-recruiter-search-and-recommendation-systems][The
+    AI Behind LinkedIn Recruiter search and recommendation systems]]
+    =LinkedIn=
+14. [[https://blogs.bing.com/search/2020_05/AI-at-Scale-in-Bing][AI at
+    Scale in Bing]] =Microsoft=
+15. [[https://medium.com/traveloka-engineering/query-understanding-engine-in-traveloka-universal-search-410ad3895db7][Query
+    Understanding Engine in Traveloka Universal Search]] =Traveloka=
+16. [[https://blog.gojekengineering.com/the-secret-sauce-behind-search-personalisation-a856fb83c2f][The
+    Secret Sauce Behind Search Personalisation]] =GoJek=
+17. [[https://eng.uber.com/uber-eats-query-understanding/][Food
+    Discovery with Uber Eats: Building a Query Understanding Engine]]
+    =Uber=
+18. [[https://ai.facebook.com/blog/neural-code-search-ml-based-code-search-using-natural-language-queries/][Neural
+    Code Search: ML-based code search using natural language queries]]
+    =Facebook=
+
+** Embeddings
+   :PROPERTIES:
+   :CUSTOM_ID: embeddings
+   :END:
+
+1. [[https://arxiv.org/abs/1803.02349][Billion-scale Commodity Embedding
+   for E-commerce Recommendation in Alibaba]]
+   ([[https://arxiv.org/pdf/1803.02349.pdf][Paper]]) =Alibaba=
+2. [[https://blog.twitter.com/engineering/en_us/topics/insights/2018/embeddingsattwitter.html][Embeddings@Twitter]]
+   =Twitter=
+3. [[https://medium.com/airbnb-engineering/listing-embeddings-for-similar-listing-recommendations-and-real-time-personalization-in-search-601172f7603e][Listing
+   Embeddings in Search Ranking]]
+   ([[https://www.kdd.org/kdd2018/accepted-papers/view/real-time-personalization-using-embeddings-for-search-ranking-at-airbnb][Paper]])
+   =Airbnb=
+4. [[https://multithreaded.stitchfix.com/blog/2018/06/28/latent-style/][Understanding
+   Latent Style]] =Stitch Fix=
+5. [[https://arxiv.org/abs/1809.06473][Towards Deep and Representation
+   Learning for Talent Search at LinkedIn]]
+   ([[https://arxiv.org/pdf/1809.06473.pdf][Paper]]) =LinkedIn=
+6. [[https://arxiv.org/abs/1705.06338][Vector Representation Of Items,
+   Customer And Cart To Build A Recommendation System]]
+   ([[https://arxiv.org/pdf/1705.06338.pdf][Paper]]) =Sears=
+7. [[https://netflixtechblog.com/machine-learning-for-a-better-developer-experience-1e600c69f36c][Machine
+   Learning for a Better Developer Experience]] =Netflix=
+
+** Natural Language Processing
+   :PROPERTIES:
+   :CUSTOM_ID: natural-language-processing
+   :END:
+
+1.  [[https://dl.acm.org/doi/10.1145/2872427.2883062][Abusive Language
+    Detection in Online User Content]]
+    ([[http://www.yichang-cs.com/yahoo/WWW16_Abusivedetection.pdf][Paper]])
+    =Yahoo=
+2.  [[https://engineering.linkedin.com/blog/2019/04/how-natural-language-processing-help-support][How
+    Natural Language Processing Helps LinkedIn Members Get Support
+    Easily]] =LinkedIn=
+3.  [[https://engineering.linkedin.com/blog/2017/10/building-smart-replies-for-member-messages][Building
+    Smart Replies for Member Messages]] =LinkedIn=
+4.  [[https://research.google/pubs/pub45189/][Smart Reply: Automated
+    Response Suggestion for Email]]
+    ([[https://storage.googleapis.com/pub-tools-public-publication-data/pdf/45189.pdf][Paper]])
+    =Google=
+5.  [[https://ai.googleblog.com/2020/07/smartreply-for-youtube-creators.html][SmartReply
+    for YouTube Creators]] =Google=
+6.  [[https://ai.googleblog.com/2020/04/using-neural-networks-to-find-answers.html][Using
+    Neural Networks to Find Answers in Tables]]
+    ([[https://arxiv.org/pdf/2004.02349.pdf][Paper]]) =Google=
+7.  [[https://ai.googleblog.com/2020/04/a-scalable-approach-to-reducing-gender.html][A
+    Scalable Approach to Reducing Gender Bias in Google Translate]]
+    =Google=
+8.  [[https://www.microsoft.com/en-us/research/group/msai/articles/assistive-ai-makes-replying-easier-2/][Assistive
+    AI Makes Replying Easier]] =Microsoft=
+9.  [[https://ai.facebook.com/blog/ai-advances-to-better-detect-hate-speech/][AI
+    Advances to Better Detect Hate Speech]] =Facebook=
+10. [[https://ai.facebook.com/blog/state-of-the-art-open-source-chatbot][A
+    State-of-the-Art Open Source Chatbot]]
+    ([[https://arxiv.org/pdf/2004.13637.pdf][Paper]]) =Facebook=
+11. [[https://ai.facebook.com/blog/a-highly-efficient-real-time-text-to-speech-system-deployed-on-cpus/][A
+    Highly Efficient, Real-Time Text-to-Speech System Deployed on CPUs]]
+    =Facebook=
+12. [[https://www.amazon.science/publications/goal-oriented-end-to-end-chatbots-with-profile-features-in-a-real-world-setting][Goal-Oriented
+    End-to-End Conversational Models with Profile Features in a
+    Real-World Setting]]
+    ([[https://assets.amazon.science/47/03/e0d14dc34d3eb6e0d4ec282067bd/goal-oriented-end-to-end-chatbots-with-profile-features-in-a-real-world-setting.pdf][Paper]])
+    =Amazon=
+13. [[https://blog.gojekengineering.com/how-gojek-uses-nlp-to-name-pickup-locations-at-scale-ffdb249d1433][How
+    Gojek Uses NLP to Name Pickup Locations at Scale]] =GoJek=
+14. [[https://multithreaded.stitchfix.com/blog/2019/07/15/give-me-jeans/][Give
+    Me Jeans not Shoes: How BERT Helps Us Deliver What Clients Want]]
+    =Stitch Fix=
+15. [[http://research.baidu.com/Blog/index-view?id=142][The
+    State-of-the-art Open-Domain Chatbot in Chinese and English]]
+    ([[https://arxiv.org/pdf/2006.16779.pdf][Paper]]) =Baidu=
+16. [[https://ai.facebook.com/blog/deep-learning-to-translate-between-programming-languages/][Deep
+    Learning to Translate Between Programming Languages]]
+    ([[https://arxiv.org/abs/2006.03511][Paper]]) =Facebook=
+17. [[https://ai.googleblog.com/2020/06/pegasus-state-of-art-model-for.html][PEGASUS:
+    A State-of-the-Art Model for Abstractive Text Summarization]]
+    ([[https://arxiv.org/pdf/1912.08777.pdf][Paper]])
+    ([[https://github.com/google-research/pegasus][Code]]) =Google=
+
+** Sequence Modelling
+   :PROPERTIES:
+   :CUSTOM_ID: sequence-modelling
+   :END:
+
+1. [[https://arxiv.org/abs/1707.08113][Recommending Complementary
+   Products in E-Commerce Push Notifications with Mixture Models]]
+   ([[https://arxiv.org/pdf/1707.08113.pdf][Paper]]) =Alibaba=
+2. [[https://arxiv.org/abs/1905.09248][Practice on Long Sequential User
+   Behavior Modeling for Click-Through Rate Prediction]]
+   ([[https://arxiv.org/pdf/1905.09248.pdf][Paper]])=Alibaba=
+3. [[https://arxiv.org/abs/2006.05639][Search-based User Interest
+   Modeling with Lifelong Sequential Behavior Data for CTR Prediction]]
+   ([[https://arxiv.org/pdf/2006.05639.pdf][Paper]]) =Alibaba=
+4. [[https://arxiv.org/abs/1511.03677][Learning to Diagnose with LSTM
+   Recurrent Neural Networks]]
+   ([[https://arxiv.org/pdf/1511.03677.pdf][Paper]]) =Google=
+5. [[https://engineering.zalando.com/posts/2016/10/deep-learning-for-understanding-consumer-histories.html][Deep
+   Learning for Understanding Consumer Histories]]
+   ([[https://doogkong.github.io/2017/papers/paper2.pdf][Paper]])
+   =Zalando=
+6. [[https://arxiv.org/abs/1712.07120][Continual Prediction of
+   Notification Attendance with Classical and Deep Network Approaches]]
+   ([[https://arxiv.org/pdf/1712.07120.pdf][Paper]]) =Telefonica=
+7. [[https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5391725/][Using
+   Recurrent Neural Network Models for Early Detection of Heart Failure
+   Onset]]
+   ([[https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5391725/pdf/ocw112.pdf][Paper]])
+   =Sutter Health=
+8. [[https://arxiv.org/abs/1511.05942][Doctor AI: Predicting Clinical
+   Events via Recurrent Neural Networks]]
+   ([[https://arxiv.org/pdf/1511.05942.pdf][Paper]]) =Sutter Health=
+
+** Forecasting
+   :PROPERTIES:
+   :CUSTOM_ID: forecasting
+   :END:
+
+1. [[https://eng.uber.com/forecasting-introduction/][Forecasting at
+   Uber: An Introduction]] =Uber=
+2. [[https://eng.uber.com/neural-networks/][Engineering Extreme Event
+   Forecasting at Uber with RNN]] =Uber=
+3. [[https://eng.uber.com/transforming-financial-forecasting-machine-learning/][Transforming
+   Financial Forecasting with Data Science and Machine Learning at
+   Uber]] =Uber=
+4. [[https://blog.gojekengineering.com/under-the-hood-of-gojeks-automated-forecasting-tool-3ddb24ad29f1][Under
+   the Hood of Gojek's Automated Forecasting Tool]] =GoJek=
+
+** Computer Vision
+   :PROPERTIES:
+   :CUSTOM_ID: computer-vision
+   :END:
+
+1.  [[https://medium.com/airbnb-engineering/categorizing-listing-photos-at-airbnb-f9483f3ab7e3][Categorizing
+    Listing Photos at Airbnb]] =Airbnb=
+2.  [[https://medium.com/airbnb-engineering/amenity-detection-and-beyond-new-frontiers-of-computer-vision-at-airbnb-144a4441b72e][Amenity
+    Detection and Beyond --- New Frontiers of Computer Vision at
+    Airbnb]] =Airbnb=
+3.  [[https://ai.facebook.com/blog/powered-by-ai-advancing-product-understanding-and-building-new-shopping-experiences/][Powered
+    by AI: Advancing product understanding and building new shopping
+    experiences]] =Facebook=
+4.  [[https://dropbox.tech/machine-learning/creating-a-modern-ocr-pipeline-using-computer-vision-and-deep-learning][Creating
+    a Modern OCR Pipeline Using Computer Vision and Deep Learning]]
+    =Dropbox=
+5.  [[https://deepomatic.com/en/how-we-improved-computer-vision-metrics-by-more-than-5-percent-only-by-cleaning-labelling-errors/][How
+    we Improved Computer Vision Metrics by More Than 5% Only by Cleaning
+    Labelling Errors]] =Deepomatic=
+6.  [[https://ai.googleblog.com/2020/03/a-neural-weather-model-for-eight-hour.html][A
+    Neural Weather Model for Eight-Hour Precipitation Forecasting]]
+    ([[https://arxiv.org/pdf/2003.12140.pdf][Paper]]) =Google=
+7.  [[https://ai.googleblog.com/2020/06/machine-learning-based-damage.html][Machine
+    Learning-based Damage Assessment for Disaster Relief]]
+    ([[https://arxiv.org/pdf/1910.06444.pdf][Paper]]) =Google=
+8.  [[https://ai.googleblog.com/2020/06/repnet-counting-repetitions-in-videos.html][RepNet:
+    Counting Repetitions in Videos]]
+    ([[https://openaccess.thecvf.com/content_CVPR_2020/papers/Dwibedi_Counting_Out_Time_Class_Agnostic_Video_Repetition_Counting_in_the_CVPR_2020_paper.pdf][Paper]])
+    =Google=
+9.  [[https://www.amazon.science/blog/converting-text-to-images-for-product-discovery][Converting
+    Text to Images for Product Discovery]]
+    ([[https://assets.amazon.science/4c/76/5830542547b7a11089ce3af943b4/scipub-972.pdf][Paper]])
+    =Amazon=
+10. [[https://medium.com/pytorch/how-disney-uses-pytorch-for-animated-character-recognition-a1722a182627][How
+    Disney uses PyTorch for Animated Character Recognition]] =Disney=
+11. [[https://www.ibm.com/blogs/research/2020/07/image-captioning-assistive-technology/][Image
+    Captioning as an Assistive Technology]]
+    ([[https://ivc.ischool.utexas.edu/~yz9244/VizWiz_workshop/videos/MMTeam-oral.mp4][Video]])
+    =IBM=
+
+** Reinforcement Learning
+   :PROPERTIES:
+   :CUSTOM_ID: reinforcement-learning
+   :END:
+
+1. [[https://arxiv.org/abs/1803.00259][Deep Reinforcement Learning for
+   Sponsored Search Real-time Bidding]]
+   ([[https://arxiv.org/pdf/1803.00259.pdf][Paper]]) =Alibaba=
+2. [[https://arxiv.org/abs/1912.02572][Dynamic Pricing on E-commerce
+   Platform with Deep Reinforcement Learning]]
+   ([[https://arxiv.org/pdf/1912.02572.pdf][Paper]]) =Alibaba=
+3. [[https://arxiv.org/abs/1802.08365][Budget Constrained Bidding by
+   Model-free Reinforcement Learning in Display Advertising]]
+   ([[https://arxiv.org/pdf/1802.08365.pdf][Paper]]) =Alibaba=
+4. [[https://databricks.com/session_na20/productionizing-deep-reinforcement-learning-with-spark-and-mlflow][Productionizing
+   Deep Reinforcement Learning with Spark and MLflow]] =Zynga=
+5. [[https://towardsdatascience.com/deep-reinforcement-learning-in-production-7e1e63471e2][Deep
+   Reinforcement Learning in Production]] =Zynga=
+6. [[https://dennybritz.com/blog/ai-trading/][Building AI Trading
+   Systems]] =Denny Britz=
+
+** Anomaly Detection
+   :PROPERTIES:
+   :CUSTOM_ID: anomaly-detection
+   :END:
+
+1. [[https://netflixtechblog.com/detecting-performance-anomalies-in-external-firmware-deployments-ed41b1bfcf46][Detecting
+   Performance Anomalies in External Firmware Deployments]] =Netflix=
+2. [[https://engineering.linkedin.com/blog/2019/isolation-forest][Detecting
+   and Preventing Abuse on LinkedIn using Isolation Forests]]
+   ([[https://github.com/linkedin/isolation-forest][Code]]) =LinkedIn=
+3. [[https://arxiv.org/abs/2002.12789][Uncovering Insurance Fraud
+   Conspiracy with Network Learning]]
+   ([[https://arxiv.org/pdf/2002.12789.pdf][Paper]]) =Ant Financial=
+4. [[https://stackoverflow.blog/2020/06/25/how-does-spam-protection-work-on-stack-exchange/][How
+   does Spam Protection Work on Stack Exchange?]] =Stack Exchange=
+5. [[https://www.usenix.org/conference/opml20/presentation/ueta][Auto
+   Content Moderation in C2C e-Commerce]] =Mercari=
+
+** Graph
+   :PROPERTIES:
+   :CUSTOM_ID: graph
+   :END:
+
+1. [[https://engineering.linkedin.com/blog/2016/10/building-the-linkedin-knowledge-graph][Building
+   The LinkedIn Knowledge Graph]] =LinkedIn=
+2. [[https://medium.com/walmartlabs/retail-graph-walmarts-product-knowledge-graph-6ef7357963bc][Retail
+   Graph --- Walmart's Product Knowledge Graph]] =Walmart=
+3. [[https://eng.uber.com/uber-eats-graph-learning/][Food Discovery with
+   Uber Eats: Using Graph Learning to Power Recommendations]] =Uber=
+4. [[https://arxiv.org/abs/1902.08730][AliGraph: A Comprehensive Graph
+   Neural Network Platform]]
+   ([[https://arxiv.org/pdf/1902.08730.pdf][Paper]]) =Alibaba=
+5. [[https://medium.com/airbnb-engineering/scaling-knowledge-access-and-retrieval-at-airbnb-665b6ba21e95][Scaling
+   Knowledge Access and Retrieval at Airbnb]] =Airbnb=
+
+** Optimization
+   :PROPERTIES:
+   :CUSTOM_ID: optimization
+   :END:
+
+1. [[https://eng.uber.com/uber-eats-trip-optimization/][How Trip
+   Inferences and Machine Learning Optimize Delivery Times on Uber
+   Eats]] =Uber=
+2. [[https://doordash.engineering/2020/02/28/next-generation-optimization-for-dasher-dispatch-at-doordash/][Next-Generation
+   Optimization for Dasher Dispatch at DoorDash]] =DoorDash=
+3. [[https://eng.lyft.com/matchmaking-in-lyft-line-9c2635fe62c4][Matchmaking
+   in Lyft Line (Part 1)]]
+   [[https://eng.lyft.com/matchmaking-in-lyft-line-691a1a32a008][(Part
+   2)]]
+   [[https://eng.lyft.com/matchmaking-in-lyft-line-part-3-d8f9497c0e51][(Part
+   3)]] =Lyft=
+4. [[https://ieeexplore.ieee.org/document/8259801][The Data and Science
+   behind GrabShare Carpooling]] (*PAPER NEEDED*) =Grab=
+
+** Information Extraction
+   :PROPERTIES:
+   :CUSTOM_ID: information-extraction
+   :END:
+
+1. [[https://www.aclweb.org/anthology/I13-1190/][Unsupervised Extraction
+   of Attributes and Their Values from Product Description]]
+   ([[https://www.aclweb.org/anthology/I13-1190.pdf][Paper]]) =Rakuten=
+2. [[https://nanonets.com/blog/information-extraction-graph-convolutional-networks/][Information
+   Extraction from Receipts with Graph Convolutional Networks]]
+   =Nanonets=
+3. [[https://dropbox.tech/machine-learning/using-machine-learning-to-index-text-from-billions-of-images][Using
+   Machine Learning to Index Text from Billions of Images]] =Dropbox=
+4. [[https://ai.googleblog.com/2020/06/extracting-structured-data-from.html][Extracting
+   Structured Data from Templatic Documents]]
+   ([[https://www.aclweb.org/anthology/I13-1190.pdf][Paper]]) =Google=
+
+** Weak Supervision
+   :PROPERTIES:
+   :CUSTOM_ID: weak-supervision
+   :END:
+
+1. [[https://dl.acm.org/doi/abs/10.1145/3299869.3314036][Snorkel
+   DryBell: A Case Study in Deploying Weak Supervision at Industrial
+   Scale]]
+   ([[https://dl.acm.org/doi/pdf/10.1145/3299869.3314036][Paper]])
+   =Google=
+2. [[https://dl.acm.org/doi/abs/10.1145/3329486.3329492][Osprey: Weak
+   Supervision of Imbalanced Extraction Problems without Code]]
+   ([[https://ajratner.github.io/assets/papers/Osprey_DEEM.pdf][Paper]])
+   =Intel=
+3. [[https://arxiv.org/abs/1909.05372][Overton: A Data System for
+   Monitoring and Improving Machine-Learned Products]]
+   ([[https://arxiv.org/pdf/1909.05372.pdf][Paper]]) =Apple=
+4. [[https://www.aaai.org/ojs/index.php/AAAI/article/view/5011][Bootstrapping
+   Conversational Agents with Weak Supervision]]
+   ([[https://arxiv.org/pdf/1812.06176.pdf][Paper]]) =IBM=
+
+** Generation
+   :PROPERTIES:
+   :CUSTOM_ID: generation
+   :END:
+
+1. [[https://openai.com/blog/better-language-models/][Better Language
+   Models and Their Implications]]
+   ([[https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf][Paper]])=OpenAI=
+2. [[https://arxiv.org/abs/2005.14165][Language Models are Few-Shot
+   Learners]] ([[https://arxiv.org/pdf/2005.14165.pdf][Paper]])
+   ([[https://openai.com/blog/openai-api/][GPT-3 Blog post]]) =OpenAI=
+3. [[https://openai.com/blog/image-gpt/][Image GPT]]
+   ([[https://cdn.openai.com/papers/Generative_Pretraining_from_Pixels_V2.pdf][Paper]])
+   ([[https://github.com/openai/image-gpt][Code]]) =OpenAI=
+4. [[https://graphics.pixar.com/library/SuperResolution/][Deep Learned
+   Super Resolution for Feature Film Production]]
+   ([[https://graphics.pixar.com/library/SuperResolution/paper.pdf][Paper]])
+   =Pixar=
+
+** Validation and A/B Testing
+   :PROPERTIES:
+   :CUSTOM_ID: validation-and-ab-testing
+   :END:
+
+1. [[https://ai.googleblog.com/2015/08/the-reusable-holdout-preserving.html][The
+   Reusable Holdout: Preserving Validity in Adaptive Data Analysis]]
+   ([[https://science.sciencemag.org/content/sci/349/6248/636.full.pdf][Paper]])
+   =Google=
+2. [[https://engineering.linkedin.com/blog/2019/06/detecting-interference--an-a-b-test-of-a-b-tests][Detecting
+   Interference: An A/B Test of A/B Tests]] =LinkedIn=
+3. [[https://engineering.linkedin.com/blog/2020/building-inclusive-products-through-a-b-testing][Building
+   Inclusive Products Through A/B Testing]]
+   ([[https://arxiv.org/pdf/2002.05819.pdf][Paper]]) =LinkedIn=
+4. [[https://blog.twitter.com/engineering/en_us/topics/insights/2017/Experimenting-To-Solve-Cramming.html][Experimenting
+   to Solve Cramming]] =Twitter=
+5. [[https://eng.uber.com/oed-pyro-release/][Announcing a New Framework
+   for Designing Optimal Experiments with Pyro]]
+   ([[https://papers.nips.cc/paper/9553-variational-bayesian-optimal-experimental-design.pdf][Paper]])
+   ([[https://arxiv.org/pdf/1911.00294.pdf][Paper]]) =Uber=
+6. [[https://medium.com/traveloka-engineering/enabling-10x-more-experiments-with-traveloka-experiment-platform-8cea13e952c][Enabling
+   10x More Experiments with Traveloka Experiment Platform]] =Traveloka=
+7. [[https://multithreaded.stitchfix.com/blog/2020/07/07/large-scale-experimentation/][Large
+   scale experimentation at StitchFix]]
+   ([[http://proceedings.mlr.press/v89/schmit19a/schmit19a.pdf][Paper]])
+   =Stitch Fix=
+8. [[https://better.engineering/modeling-conversion-rates-and-saving-millions-of-dollars-using-kaplan-meier-and-gamma-distributions/][Modeling
+   Conversion Rates and Saving Millions Using Kaplan-Meier and Gamma
+   Distributions]] ([[https://github.com/better/convoys][Code]])
+   =Better=
+
+** Practices
+   :PROPERTIES:
+   :CUSTOM_ID: practices
+   :END:
+
+1. [[https://arxiv.org/abs/1206.5533][Practical Recommendations for
+   Gradient-Based Training of Deep Architectures]]
+   ([[https://arxiv.org/pdf/1206.5533.pdf][Paper]]) =Yoshua Bengio=
+2. [[https://research.google/pubs/pub43146/][Machine Learning: The High
+   Interest Credit Card of Technical Debt]]
+   ([[https://storage.googleapis.com/pub-tools-public-publication-data/pdf/43146.pdf][Paper]])
+   ([[https://papers.nips.cc/paper/5656-hidden-technical-debt-in-machine-learning-systems.pdf][Paper]])
+   =Google=
+3. [[https://developers.google.com/machine-learning/guides/rules-of-ml][Rules
+   of Machine Learning: Best Practices for ML Engineering]] =Google=
+4. [[http://sites.computer.org/debull/A18dec/p5.pdf][On Challenges in
+   Machine Learning Model Management]] =Amazon=
+5. [[https://booking.ai/https-booking-ai-machine-learning-production-3ee8fe943c70][Machine
+   Learning in production: the Booking.com approach]] =Booking=
+6. [[https://www.kdd.org/kdd2019/accepted-papers/view/150-successful-machine-learning-models-6-lessons-learned-at-booking.com][150
+   Successful Machine Learning Models: 6 Lessons Learned at
+   Booking.com]]
+   ([[https://dl.acm.org/doi/pdf/10.1145/3292500.3330744][Paper]])
+   =Booking=
+7. [[https://multithreaded.stitchfix.com/blog/2016/03/16/engineers-shouldnt-write-etl/][Engineers
+   Shouldn't Write ETL: A Guide to Building a High Functioning Data
+   Science Department]] =Stitch Fix=
+8. [[https://multithreaded.stitchfix.com/blog/2019/03/11/FullStackDS-Generalists/][Beware
+   the Data Science Pin Factory: The Power of the Full-Stack Data
+   Science Generalist]] =Stitch Fix=
+
+** Failures
+   :PROPERTIES:
+   :CUSTOM_ID: failures
+   :END:
+
+1. [[http://positivelysemidefinite.com/2020/06/160k-students.html][160k+
+   High School Students Will Graduate Only If a Model Allows Them to]]
+   =International Baccalaureate=
+2. [[https://www.wired.com/story/when-it-comes-to-gorillas-google-photos-remains-blind/][When
+   It Comes to Gorillas, Google Photos Remains Blind]] =Google=
+3. [[https://www.wired.com/story/algorithm-predicts-criminality-based-face-sparks-furor/][An
+   Algorithm That 'Predicts' Criminality Based on a Face Sparks a
+   Furor]] =Harrisburg University=
+
+Some people collect stamps. /I collect these./ 😅
